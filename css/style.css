@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Quicksand', sans-serif;
@@ -45,10 +48,12 @@ body {
     font-size: 24px;
 }
 
-#social a, .nav-link{
+#social a,
+.nav-link {
     color: #fff;
 }
-.navbar #social .btn-translation button{
+
+.navbar #social .btn-translation button {
     position: relative;
     right: 0;
     bottom: -10px;
@@ -82,11 +87,12 @@ body {
 
 .explore:hover {
     color: #15A26B;
-    box-shadow: 0 0 10px 0 #15A26B inset, 0 0 10px 4px #15A26B;
-
+    box-shadow: 0 0 10px 0 #15A26B inset, 0 0 10px 4px #22c284;
 }
 
-.about, .portfolio, .contact {
+.about,
+.portfolio,
+.contact {
     padding: 50px;
 }
 
@@ -94,26 +100,28 @@ body {
     background-color: #f5f5f5;
 }
 
-.card-effects{
+.card-effects {
     height: 100%;
     margin: 10px;
     background-color: #363636;
     position: relative;
     z-index: 10;
+    border: 0;
 }
+
 .card {
     z-index: 2000;
     position: relative;
 }
 
-.card-effects>.card{
+.card-effects>.card {
     height: 100%;
     border: 1;
     border-radius: 0;
     transition: .12s ease-in-out;
-
 }
-.card-effects>.card:hover{
+
+.card-effects>.card:hover {
     -webkit-transform: translate(-12px);
     transform: translate(12px, -12px);
 }
@@ -123,8 +131,17 @@ body {
     color: #fff;
 }
 
+
+/*Form Contact*/
+
 .form-contact input {
     border-radius: 0;
+}
+
+.form-control:focus {
+    border-color: #15A26B;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+    outline: 0 none;
 }
 
 #form-btn {
@@ -155,22 +172,33 @@ footer span {
     padding: 50px;
 }
 
+#btnTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1000;
+    display: none;
+    background-color: #1B242F;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
 
 /* Media Queries */
+
 @media (max-width: 991px) {
     .navbar {
         background-color: #1B242F !important;
     }
-    .offcanvas-header{
+    .offcanvas-header {
         background-color: #1B242F;
         border-bottom: 3px solid #15A26B;
         color: #fff;
     }
-    .offcanvas-body{
+    .offcanvas-body {
         background-color: #252934;
-    
     }
-    #social{
+    #social {
         position: absolute;
         bottom: 0;
         right: 0;
