@@ -112,6 +112,14 @@ body {
 .about{
     font-size: 18px;
 }
+
+#svg-web{
+    width: 30em;
+    position: absolute;
+    right: 0;
+    bottom: -335px;
+}
+
 .about .card-text{
     text-align: center;
 }
@@ -261,6 +269,9 @@ footer .nav-link:hover{
         color: transparent;
         border-color: transparent;
     }
+    #svg-web{
+        display: none;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px){
@@ -281,6 +292,12 @@ footer .nav-link:hover{
         color: transparent;
         border-color: transparent;
     }
+    #svg-web{
+    width: 15em;
+    position: absolute;
+    left: 0;
+    bottom: -335px;
+}
 }
 
 @media (min-width: 992px) {
