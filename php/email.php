@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['email'])){
+if (isset($_POST['email'])) {
 
     $name = addslashes($_POST['name']);
     $email = addslashes($_POST['email']);
@@ -17,7 +17,7 @@ if(isset($_POST['email'])){
             <p><b>Mensagem: </b>$message</p>
             <p>Este email foi enviado em <b>$date_start</b> às <b>$hour_start</b></p>
         </html>
-    "; 
+    ";
 
     $header = array(
         'MIME-Version' => '1.0',
@@ -26,14 +26,12 @@ if(isset($_POST['email'])){
         'Reply-To' => $email,
         'X-Mailer' => 'PHP/' . phpversion()
     );
-    
-    if(mail($to, $subject, $body, $header)){
-        echo "Email enviado com sucesso!";
-    }else{
-        echo "Erro ao enviar email, tente novamente!";
+
+    if (mail($to, $subject, $body, $header)) {
+        echo "<script>alert('Email enviado com sucesso!')</script>";
+    } else {
+        echo "<script>alert('Erro ao enviar email, tente novamente!')</script>";
     }
-}else{
-    echo "Preencha corretamente os seus dados e tente novamente";
+} else {
+    echo "<script>alert('Preencha corretamente os seus dados e tente novamente!')</script>";
 }
-    
-?>
