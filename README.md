@@ -1,6 +1,4 @@
-<h1 align="center">Ronaldo</h1>
-
-## Meu website
+## Meu Website
 
 - [Website](https://devronaldo.com.br/)
 
