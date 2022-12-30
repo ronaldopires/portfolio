@@ -10,6 +10,31 @@ body {
   overflow-x: hidden !important;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4b4b4d; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #252934; 
+}
+
+#main-container {
+  height: 100vh;
+  background-color: #252934;
+}
+
 /* Navbar */
 
 .navbar {
@@ -30,9 +55,12 @@ body {
 .navbar-dark .navbar-nav .nav-link:hover,
 .titlename {
   color: #15a26b;
+  font-weight: 400;
 }
-.titlename {
-  font-weight: 700;
+.navbar .navbar-nav .nav-item .active,
+.navbar-dark .navbar-nav .nav-link:active {
+  color: #15a26b;
+  font-weight: bold;
 }
 .navbar-nav li a {
   text-transform: uppercase;
@@ -51,13 +79,63 @@ body {
 
 /* End Navbar */
 
-#main-container {
-  padding: 0;
-  height: 100vh;
-  background-color: #252934;
-  align-items: center;
-  position: relative;
+/* Header */
+#header-container {
+  color: #f5f5f5;
+  margin-top: 83px;
+  height: calc(100vh - 83px);
+  background: transparent;
 }
+
+#header-container p {
+  font-size: 44px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.btn-more {
+  border-radius: 0%;
+  border: 2px solid #f5f5f5;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.btn-more:hover {
+  color: #15a26b;
+  box-shadow: 0 0 10px 0 #15a26b inset, 0 0 10px 4px #15a26b;
+}
+
+#titlename{
+  border-right: 4px solid #fff;
+}
+
+.typing-animation{
+  animation: blinkCursor 500ms steps(28) infinite normal, typing 2s steps(28) 1s normal both;
+}
+@keyframes typing{
+  from {
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+@keyframes blinkCursor{
+  from {
+    border-right-color: #fff;
+  }
+  to {
+    border-right-color: transparent;
+  }
+
+}
+
+.titlename {
+  font-weight: 700;
+}
+
 /* Animate */
 .anime-left,
 .anime-right,
@@ -84,37 +162,10 @@ body {
 }
 /* End Animate */
 
-#first-container {
-  text-align: center;
-  color: #f5f5f5;
-  z-index: 1;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 40vh;
-}
-
-#first-container h1 {
-  font-size: 44px;
-}
-.btn-more {
-  background: transparent;
-  border-radius: 0%;
-  border: 2px solid #f5f5f5;
-  text-transform: uppercase;
-  color: #f5f5f5;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
-}
-
-.btn-more:hover {
-  color: #15a26b;
-  box-shadow: 0 0 10px 0 #15a26b inset, 0 0 10px 4px #15a26b;
-}
 .progress-bar {
   background-color: #1b242f;
 }
+/* About */
 .about {
   font-size: 18px;
 }
@@ -125,8 +176,11 @@ body {
   font-size: 128px;
   color: #252934;
 }
-.about h3 {
+.about h1 {
   text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0 50px 0;
 }
 .about,
 .portfolio,
@@ -134,10 +188,24 @@ body {
   padding: 50px;
 }
 
+/* Portfolio */
 .portfolio {
   background-color: #f5f5f5;
 }
+.portfolio h1{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+.card{
+  transition: .5s ease all;
+}
 
+.card:hover{
+  transform: scale(1.04);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .card-effects {
   height: 100%;
   margin: 10px;
@@ -159,11 +227,20 @@ body {
   opacity: 1;
 }
 
+/* Contact*/
 .contact {
   background-color: #252934;
   color: #f5f5f5;
 }
-
+.contact h1{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+.list-group-item>.nav-link:hover{
+  color: rgb(21, 162, 107);
+}
 /*Form Contact*/
 
 .form-contact input {
@@ -189,7 +266,6 @@ footer {
   text-align: center;
   background-color: #1b242f;
   color: #f5f5f5;
-  height: 200px;
 }
 
 footer p {
@@ -295,11 +371,11 @@ svg {
 /* Media Queries */
 
 @media (min-width: 500px) and (max-width: 767px) {
-  #first-container h1 {
-    font-size: 26px;
+  #header-container p {
+    font-size: 29px;
   }
-  #first-container h2 {
-    font-size: 21px;
+  #header-container h2 {
+    font-size: 22px;
   }
   .btn-more {
     width: 150px;

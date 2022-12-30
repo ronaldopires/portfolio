@@ -47,19 +47,32 @@ $(document).ready(function () {
         }, 400);
         return false;
     });
-    // $("a").on('click', function(event) {
-    //     if (this.hash !== "") {
-    //         event.preventDefault();
-    //         var hash = this.hash;
-    //         $('html, body').animate({
-    //             scrollTop: $(hash).offset().top
-    //         }, 800, function() {
-    //             window.location.hash = hash;
-    //         });
-    //     }
-    // });
-    $(".navbar-nav .nav-item .nav-link").on("click", function () {
-        $(".navbar-nav .nav-item .nav-link").removeClass("active");
-        $(this).addClass("active");
+
+    /* Scroll Header */
+    window.addEventListener('scroll', function () {
+        activateMenuCurrent();
     });
+
+    const sections = document.querySelectorAll('section[id]');
+    function activateMenuCurrent() {
+        const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+        for (const section of sections) {
+            const sectionTop = section.offsetTop
+            const sectionHeight = section.offsetHeight
+            const sectionId = section.getAttribute('id')
+            const checkpointStart = checkpoint >= sectionTop
+            const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+            if (checkpointStart && checkpointEnd) {
+            document
+                .querySelector('nav ul li a[href*=' + sectionId + ']')
+                .classList.add('active')
+            } else {
+            document
+                .querySelector('nav ul li a[href*=' + sectionId + ']')
+                .classList.remove('active')
+            }
+        }
+    }
+
+
 });

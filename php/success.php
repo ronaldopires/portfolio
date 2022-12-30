@@ -27,22 +27,22 @@
     <div class="container">
         <div class="row align-items-center" style="height: 100vh;">
             <div class="col">
-                <h1>Oops!!</h1>
-                <p>Parece que ocorreu um erro ao enviar a mensagem.</p>
-                <p>Tente novamente por favor!</p>
+                <h1>Obaa!!</h1>
+                <p>Sua mensagem foi enviada com sucesso!</p>
+                <p>Em breve entrarei em contato com você 😉</p>
                 <p>
                     <a class="btn btn-primary" href="../index.html" role="button">Voltar</a>
                 </p>
             </div>
             <div class="col">
-                <img src="../img/error.png" alt="Erro ao enviar mensagem">
+                <img src="../img/email.png" alt="Enviado com sucesso">
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
-    <!-- <a href="https://www.flaticon.com/free-icons/corrupted-file" title="corrupted file icons">Corrupted file icons created by bearicons - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Freepik - Flaticon</a> -->
 </body>
 
 </html>
